@@ -1,10 +1,19 @@
 [tool.poetry]
 name = "mlflow-oss-store"
 version = "0.1.0"
-description = ""
+description = "MLflow artifact store plugin for AliCloud OSS"
 authors = ["Guan Hao <raptium@gmail.com>"]
 packages = [
     { include = "mlflow_oss" },
+]
+license = "MIT"
+repository = "https://github.com/raptium/mlflow-oss-store.git"
+keywords = ["mlflow", "oss"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Environment :: Plugins",
+    "License :: OSI Approved :: MIT License"
 ]
 
 [tool.poetry.dependencies]
