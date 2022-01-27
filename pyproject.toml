@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mlflow-oss-store"
+version = "0.1.0"
+description = ""
+authors = ["Guan Hao <raptium@gmail.com>"]
+packages = [
+    { include = "mlflow_oss" },
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+oss2 = "^2.15.0"
+
+[tool.poetry.dev-dependencies]
+yapf = "^0.32.0"
+pylint = "^2.12.2"
+mlflow = "^1.23.0"
+pytest = "^6.2.5"
+
+[tool.poetry.plugins."mlflow.artifact_repository"]
+oss = "mlflow_oss.artifact_repo:OSSArtifactRepository"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
